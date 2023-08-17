@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import pet.store.controller.model.PetStoreData;
+import pet.store.controller.model.PetStoreEmployee;
 import pet.store.dao.PetStoreDao;
 import pet.store.entity.PetStore;
 
@@ -51,4 +52,9 @@ public class PetStoreService {
 		return petStoreDao.findById(petStoreId)
 				.orElseThrow(() -> new NoSuchElementException("Pet Store with ID=" + petStoreId + " does not exist, please try again."));
 	}
+
+	public PetStoreEmployee saveEmployee(Long petStoreId, PetStoreEmployee petStoreEmployee) {
+		return null;
+	}
+
 }
